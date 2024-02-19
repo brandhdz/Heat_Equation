@@ -5,4 +5,4 @@ m = 10,
 t_if = 0.0, 1.0,
 x_if = 0.0, 1.0,
 f_if = 0.0, 1.0,
-file_name = "heat_bar.dat"
+file_name = "./data/heat_bar.dat"

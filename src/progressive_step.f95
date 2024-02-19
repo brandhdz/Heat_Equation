@@ -1,9 +1,11 @@
-module progressive_step
+subroutine progressive_step
 
+    use iso_fortran_env, only : dp => real64
     use parameters
+    use grid
 
     implicit none
-    
+
     if ( f > 0.5 ) then
         write(*,*) "Método inestable"
         write(*,*) "Prueba con otros parámetros"
@@ -15,4 +17,4 @@ module progressive_step
         end do
     end if
     
-end module progressive_step
+end subroutine progressive_step

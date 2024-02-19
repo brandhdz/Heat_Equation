@@ -7,10 +7,10 @@ subroutine read_input
 
     integer(i4) :: unit
 
+    read(*,*) input_file
+
     open(newunit = unit, file = input_file)
     read(unit, nml = input_parameters)
     close(unit)
 
-
-    
 end subroutine read_input
