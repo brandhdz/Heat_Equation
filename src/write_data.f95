@@ -8,10 +8,10 @@ subroutine write_data
 
     integer(i4) :: unit
     
-    open(newunit = unit, file = file_name )
+    open(newunit = unit, file = file_name)
     do j = 1, m
         write(unit,*) x(j), u(j,:)
     end do
-    close(unit)
+    !close(unit)
     
 end subroutine write_data

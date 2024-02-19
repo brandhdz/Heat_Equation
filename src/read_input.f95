@@ -11,6 +11,6 @@ subroutine read_input
 
     open(newunit = unit, file = input_file)
     read(unit, nml = input_parameters)
-    close(unit)
+    !close(unit)
 
 end subroutine read_input

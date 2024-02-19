@@ -9,5 +9,5 @@ gfortran -J$OBJ -c $SRC/read_input.f95 -o $OBJ/read_input.o
 gfortran -J$OBJ -c $SRC/progressive_step.f95 -o $OBJ/progressive_step.o
 gfortran -J$OBJ -c $SRC/write_data.f95 -o $OBJ/write_data.o
 gfortran -J$OBJ -c $SRC/main.f95 -o $OBJ/main.o
-gfortran -I$OBJ/*.o -o $BIN/main.exe
-$BIN/main.exe <<< input_parameters.dat
+gfortran $OBJ/*.o -o $BIN/main.exe
+$BIN/main.exe <<< parameters.dat
