@@ -12,5 +12,5 @@ module parameters
     character(100) :: input_file, file_name
 
     namelist /input_parameters/ a, n, m, t_if, x_if, f_if, file_name
-    
+
 end module parameters
