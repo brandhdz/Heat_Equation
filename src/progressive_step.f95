@@ -1,6 +1,5 @@
 subroutine progressive_step
 
-    use iso_fortran_env, only : dp => real64
     use parameters
     use grid
 
