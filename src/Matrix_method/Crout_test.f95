@@ -6,10 +6,10 @@ program Crout_test
     implicit none
 
     integer(i4) :: i, j
-    real(dp), dimension(4) :: x
-    real(dp), dimension(4,5) :: a
+    real(dp), dimension(4) :: x, b
+    real(dp), dimension(4,4) :: a
 
-    do j = 1, 5
+    do j = 1, 4
         do i = 1, 4
             a(i,j) = 0
         end do
@@ -27,12 +27,9 @@ program Crout_test
         a(i,i-1) = -1
     end do
 
-    a(1,5) = 1
-    a(2,5) = 0
-    a(3,5) = 0
-    a(4,5) = 1
+    b = [1,0,0,1]
 
-    x = Crout_sol(a,4)
+    x = Crout_sol(a,b,4)
 
     print*, x
 

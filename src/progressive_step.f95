@@ -9,9 +9,9 @@ subroutine progressive_step
         write(*,*) "Método inestable"
         write(*,*) "Prueba con otros parámetros"
     else
-        do j = 1, n - 1
-            do i = 2, m - 1
-                u(i,j+1) = (1-2*f)*u(i,j) + f*(u(i+1,j)+u(i-1,j)) 
+        do i = 1, n - 1
+            do j = 2, m - 1
+                u(j,i+1) = (1-2*f)*u(j,i) + f*(u(j+1,i)+u(j-1,i)) 
             end do
         end do
     end if
