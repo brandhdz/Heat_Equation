@@ -34,5 +34,7 @@ subroutine regressive_step
     do i = 1, n - 1
         u(:,i + 1) = Crout_sol(p,u(:,i),m)
     end do
+
+    call write_data()
     
 end subroutine regressive_step

@@ -17,7 +17,5 @@ program main
     else
         print*, "Método incorrecto"
     end if
-    
-    call write_data()
 
 end program main
