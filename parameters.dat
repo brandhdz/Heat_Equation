@@ -1,4 +1,5 @@
 &input_parameters
+method = 'Explicit'
 a = 0.2,
 n = 10,
 m = 10,
