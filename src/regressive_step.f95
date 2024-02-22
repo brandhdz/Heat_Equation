@@ -9,23 +9,23 @@ subroutine regressive_step
 
     real(dp), dimension(m,m) :: p
 
-    p(1,1) = 1
-
-    do j = 2, m - 1
-        do i = 2, m - 1
+    do j = 1, m 
+        do i = 1, m
             p(j,i) = 0
         end do
     end do
 
-    do j = 2, m - 3
+    p(1,1) = 1
+
+    do j = 2, m - 2
         p(j,j+1) = -f
     end do
 
-    do j = 2, m - 1 
+    do j = 2, m - 1
         p(j,j) = 1 + 2*f
     end do
 
-    do j = 2, m - 1
+    do j = 3, m - 1
         p(j,j-1) = -f
     end do
 
