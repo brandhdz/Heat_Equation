@@ -7,7 +7,7 @@ module parameters
     private :: dp, i4
     
     integer(i4) :: n, m, i, j
-    real(dp) :: a, k, h, f, pi
+    real(dp) :: pi, a, k, h, f
     real(dp), dimension(2) :: t_if, x_if, f_if
     character(100) :: method, input_file, file_name
 
