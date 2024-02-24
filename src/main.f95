@@ -2,6 +2,7 @@ program main
 
     use grid
     use init_conditions
+    use heat_eq_methods
 
     implicit none
 
@@ -14,6 +15,8 @@ program main
         call progressive_step()
     else if ( method == 'Matrix') then 
         call regressive_step()
+    else if ( method == 'CN') then 
+        call CN_step()
     else
         print*, "Método incorrecto"
     end if

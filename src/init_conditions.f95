@@ -8,6 +8,7 @@ module init_conditions
     contains
 
     subroutine set_init_conditions(u, x, n, m, f_i, f_f)
+        
         integer(i4), intent(in) :: n, m
         real(dp), intent(in) :: f_i, f_f
         real(dp), dimension(:), intent(in) :: x

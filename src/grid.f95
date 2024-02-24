@@ -11,6 +11,7 @@ module grid
     contains
 
     subroutine set_grid(t,t_i,k,x,x_i,h)
+        
         integer(i4) :: i, j
         real(dp), intent(in) :: t_i, k, x_i, h
         real(dp), intent(out), dimension(:) :: t, x
