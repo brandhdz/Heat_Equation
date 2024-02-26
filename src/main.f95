@@ -13,9 +13,9 @@ program main
 
     if ( method == 'Explicit' ) then
         call progressive_step()
-    else if ( method == 'Matrix') then 
+    else if ( method == 'Matrix' ) then 
         call regressive_step()
-    else if ( method == 'CN') then 
+    else if ( method == 'CN' ) then 
         call CN_step()
     else
         print*, "Método incorrecto"

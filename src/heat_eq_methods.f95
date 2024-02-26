@@ -67,6 +67,7 @@ module heat_eq_methods
 
         implicit none
 
+        real(dp), dimension(m) :: r
         real(dp), dimension(m,m) :: q
 
         do j = 1, m 
@@ -91,11 +92,12 @@ module heat_eq_methods
     
         q(m,m) = 1
 
-        do i = 1, n - 1
-            do j = 2, m -1 
-                u(j, i) = (1-f)*u(j,i) + f*0.5*(u(j+1,i)+u(j-1,i))
+	    do i = 1, n - 1
+            r(:) = u(:,i)
+            do j = 2, m - 1 
+                u(j, i) = (1-f)*r(j) + f*0.5*(r(j+1)+r(j-1))
             end do
-            u(:,i + 1) = Crout_sol(q,u(:,i),m)
+	        u(:,i + 1) = Crout_sol(q,u(:,i),m)
         end do
 
         call write_data()

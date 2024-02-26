@@ -19,7 +19,7 @@ module init_conditions
             u(m, i) = f_f
         end do
 
-        do j = 1, m
+        do j = 2, m - 1
             u(j, 1) = SIN(pi*x(j))
         end do
     
