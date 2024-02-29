@@ -1,4 +1,4 @@
-
+#! /bin/bash
 
 SRC=./src
 OBJ=./obj
